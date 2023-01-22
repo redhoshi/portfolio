@@ -14,23 +14,60 @@ class CardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Card(
-          /* onPressed: onPressed,
-          txt: txt,*/
-          child: Padding(
-            padding: EdgeInsets.all(12),
+        new SizedBox(
+          child: Card(
+            clipBehavior: Clip.antiAlias,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(24),
+            ),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'If life were predictable it would cease to be life, and be without flavor.',
-                  style: TextStyle(fontSize: 24),
+                Stack(
+                  children: [
+                    Ink.image(
+                      image: NetworkImage(
+                        'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1327&q=80',
+                      ),
+                      height: 160,
+                      fit: BoxFit.cover,
+                    ),
+                    Positioned(
+                      bottom: 16,
+                      right: 16,
+                      left: 16,
+                      child: Text(
+                        'Cats rule the world!',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 24,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-                const SizedBox(height: 12),
-                Text(
-                  'Eleanor Roosevelt',
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                Padding(
+                  padding: EdgeInsets.all(16).copyWith(bottom: 0),
+                  child: Text(
+                    'The cat is the only domesticated species in the family Felidae and is often referred to as the domestic cat to distinguish it from the wild members of the family.',
+                    style: TextStyle(fontSize: 16),
+                  ),
                 ),
+                ButtonBar(
+                  alignment: MainAxisAlignment.start,
+                  children: [
+                    txt == null
+                        ? new SizedBox()
+                        : ElevatedButton(
+                            child: Text(txt),
+                            onPressed: () {},
+                          ),
+                    ElevatedButton(
+                      child: Text('Buy Cat Food'),
+                      onPressed: () {},
+                    )
+                  ],
+                )
               ],
             ),
           ),
@@ -39,3 +76,7 @@ class CardPage extends StatelessWidget {
     );
   }
 }
+
+/** card partをhttps://note.com/_hi/n/n0dc22e030cd0 の1番下のcardに変更 */
+/** cardが画像の上にstackされる形になっているので変更 */
+/** オブジェクトが潰れるのでレスポンシブデザインにする->widthを調整 */

@@ -65,25 +65,46 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             Stack(children: [
               Container(
-                child: SizedBox(
-                  height: screenSize.height * 0.3,
-                  width: screenSize.width,
-                  child: Image.asset(
-                    'assets/images/cover.jpg',
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-              Column(
-                children: [
-                  Center(
-                    child: CardPage(
-                      txt: 'hi',
-                      onPressed: () {},
+                child: Column(children: [
+                  SizedBox(
+                    height: screenSize.height * 0.3,
+                    width: screenSize.width,
+                    child: Image.asset(
+                      'assets/images/cover.jpg',
+                      fit: BoxFit.cover,
                     ),
                   ),
-                  Column()
-                ],
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        /** if deviceで分ける */
+                        screenSize.width >= 800
+                            ? Row(children: [
+                                SizedBox(
+                                  width: 350,
+                                  height: 350,
+                                  child: Padding(
+                                      padding: EdgeInsets.all(16)
+                                          .copyWith(bottom: 0),
+                                      child: CardPage(
+                                        txt: 'hi',
+                                        onPressed: () {},
+                                      )),
+                                ),
+                                SizedBox(
+                                    width: 400,
+                                    height: 400,
+                                    child: CardPage(
+                                      txt: 'hi',
+                                      onPressed: () {},
+                                    ))
+                              ])
+                            : Row(),
+                      ]),
+                ]),
+              ),
+              Column(
+                children: [Center(), Column()],
               ),
             ]),
           ],
