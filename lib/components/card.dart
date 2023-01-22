@@ -28,7 +28,7 @@ class CardPage extends StatelessWidget {
                       image: NetworkImage(
                         'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1327&q=80',
                       ),
-                      height: 160,
+                      height: 140,
                       fit: BoxFit.cover,
                     ),
                     Positioned(
@@ -50,7 +50,7 @@ class CardPage extends StatelessWidget {
                   padding: EdgeInsets.all(16).copyWith(bottom: 0),
                   child: Text(
                     'The cat is the only domesticated species in the family Felidae and is often referred to as the domestic cat to distinguish it from the wild members of the family.',
-                    style: TextStyle(fontSize: 16),
+                    style: TextStyle(fontSize: 13),
                   ),
                 ),
                 ButtonBar(

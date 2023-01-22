@@ -74,33 +74,50 @@ class _HomePageState extends State<HomePage> {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        /** if deviceで分ける */
-                        screenSize.width >= 800
-                            ? Row(children: [
-                                SizedBox(
-                                  width: 350,
-                                  height: 350,
-                                  child: Padding(
-                                      padding: EdgeInsets.all(16)
-                                          .copyWith(bottom: 0),
-                                      child: CardPage(
-                                        txt: 'hi',
-                                        onPressed: () {},
-                                      )),
-                                ),
-                                SizedBox(
-                                    width: 400,
-                                    height: 400,
-                                    child: CardPage(
-                                      txt: 'hi',
-                                      onPressed: () {},
-                                    ))
-                              ])
-                            : Row(),
-                      ]),
+                  Wrap(
+                    children: <Widget>[
+                      new SizedBox(
+                        width: 300,
+                        height: 300,
+                        child: Padding(
+                            padding: EdgeInsets.all(16).copyWith(bottom: 0),
+                            child: CardPage(
+                              txt: 'hi',
+                              onPressed: () {},
+                            )),
+                      ),
+                      new SizedBox(
+                        width: 300,
+                        height: 300,
+                        child: Padding(
+                            padding: EdgeInsets.all(16).copyWith(bottom: 0),
+                            child: CardPage(
+                              txt: 'hi',
+                              onPressed: () {},
+                            )),
+                      ),
+                      new SizedBox(
+                        width: 300,
+                        height: 300,
+                        child: Padding(
+                            padding: EdgeInsets.all(16).copyWith(bottom: 0),
+                            child: CardPage(
+                              txt: 'hi',
+                              onPressed: () {},
+                            )),
+                      ),
+                      new SizedBox(
+                        width: 300,
+                        height: 300,
+                        child: Padding(
+                            padding: EdgeInsets.all(16).copyWith(bottom: 0),
+                            child: CardPage(
+                              txt: 'hi',
+                              onPressed: () {},
+                            )),
+                      ),
+                    ],
+                  ),
                 ]),
               ),
               Column(
@@ -113,3 +130,5 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
+/** 2項演算子の複数条件:https://qiita.com/smicle/items/7d3b9881834dc0142fb7 */
