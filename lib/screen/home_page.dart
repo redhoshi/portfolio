@@ -172,9 +172,56 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       new SizedBox(
-                        height: screenSize.height * 0.7,
+                        height: screenSize.height * 0.01,
+                      ),
+                      new SizedBox(
+                        height: screenSize.height * 0.4,
                         width: screenSize.width * 0.7,
                         child: EducationWidget(),
+                      ),
+                      new SizedBox(
+                        height: screenSize.height * 0.05,
+                      ),
+                      new SizedBox(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.book_sharp,
+                              size: 30,
+                              color: Colors.blueGrey.shade300,
+                            ),
+                            Text(
+                              'Publication',
+                              style: TextStyle(
+                                color: Colors.blueGrey.shade300,
+                                fontSize: 20,
+                                fontFamily: 'Montserrat',
+                                fontWeight: FontWeight.w500,
+                                letterSpacing: 3,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      new SizedBox(
+                        height: screenSize.height * 0.04,
+                      ),
+                      new SizedBox(
+                        height: screenSize.height * 0.2,
+                        width: screenSize.width * 0.7,
+                        child: Column(
+                          children: [
+                            Text(
+                                "Consideration on the Difficulty of Timbre Identification of Musical Instrument Sounds for Hearing Training of the Hearing Impaired, Shiho Akaki, Daichi Moriyama, Kenta Wakasa, Rumi Hiraga, Keiichi Yasu, Keiji Tabuchi, and Hiroko Terasawa. 2021.  non peer review"),
+                            Divider(),
+                            Text(
+                                "聴覚障害者の楽器音認知に関する検討-楽器分類に着目して- , 赤木志帆, 森山大地, 若狭健太, 平賀瑠美, 安啓一, 田渕経司, 寺澤洋子, 情報処理学会アクセシビリティ研究会(AAC), 査読なし, 2022"),
+                            Divider(),
+                            Text(
+                                'Design and Evaluation of Instrument Sound Identification Difficulty for the Deaf and Hard-of Hearing, Shiho Akaki, Rumi Hiraga, Keiichi Yasu, Keiji Tabuchi and Hiroko Terasawa, APSIPA, peer review, 2022'),
+                          ],
+                        ),
                       ),
                       new SizedBox(
                         height: screenSize.height * 0.05,
