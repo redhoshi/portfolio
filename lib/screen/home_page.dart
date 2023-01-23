@@ -1,6 +1,7 @@
 /* /Volumes/lspc/lecture/audioplayers-main/packages/audioplayers/example */
 
 import 'package:flutter/material.dart';
+import 'package:port/widgets/education.dart';
 
 import '../components/card.dart';
 import '../widgets/explore_drawer.dart';
@@ -65,63 +66,123 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             Stack(children: [
               Container(
-                child: Column(children: [
-                  SizedBox(
-                    height: screenSize.height * 0.3,
-                    width: screenSize.width,
-                    child: Image.asset(
-                      'assets/images/cover.jpg',
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  Wrap(
-                    children: <Widget>[
-                      new SizedBox(
-                        width: 300,
-                        height: 300,
-                        child: Padding(
-                            padding: EdgeInsets.all(16).copyWith(bottom: 0),
-                            child: CardPage(
-                              txt: 'hi',
-                              onPressed: () {},
-                            )),
+                child: Column(
+                    // mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        height: screenSize.height * 0.3,
+                        width: screenSize.width,
+                        child: Image.asset(
+                          'assets/images/cover.jpg',
+                          fit: BoxFit.cover,
+                        ),
                       ),
                       new SizedBox(
-                        width: 300,
-                        height: 300,
-                        child: Padding(
-                            padding: EdgeInsets.all(16).copyWith(bottom: 0),
-                            child: CardPage(
-                              txt: 'hi',
-                              onPressed: () {},
-                            )),
+                        height: screenSize.height * 0.02,
                       ),
                       new SizedBox(
-                        width: 300,
-                        height: 300,
-                        child: Padding(
-                            padding: EdgeInsets.all(16).copyWith(bottom: 0),
-                            child: CardPage(
-                              txt: 'hi',
-                              onPressed: () {},
-                            )),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.source_rounded,
+                              size: 30,
+                              color: Colors.blueGrey.shade300,
+                            ),
+                            Text(
+                              'Creation',
+                              style: TextStyle(
+                                color: Colors.blueGrey.shade300,
+                                fontSize: 20,
+                                fontFamily: 'Montserrat',
+                                fontWeight: FontWeight.w500,
+                                letterSpacing: 3,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Wrap(
+                        children: <Widget>[
+                          new SizedBox(
+                            width: 300,
+                            height: 300,
+                            child: Padding(
+                                padding: EdgeInsets.all(16).copyWith(bottom: 0),
+                                child: CardPage(
+                                  txt: 'hi',
+                                  onPressed: () {},
+                                )),
+                          ),
+                          new SizedBox(
+                            width: 300,
+                            height: 300,
+                            child: Padding(
+                                padding: EdgeInsets.all(16).copyWith(bottom: 0),
+                                child: CardPage(
+                                  txt: 'hi',
+                                  onPressed: () {},
+                                )),
+                          ),
+                          new SizedBox(
+                            width: 300,
+                            height: 300,
+                            child: Padding(
+                                padding: EdgeInsets.all(16).copyWith(bottom: 0),
+                                child: CardPage(
+                                  txt: 'hi',
+                                  onPressed: () {},
+                                )),
+                          ),
+                          new SizedBox(
+                            width: 300,
+                            height: 300,
+                            child: Padding(
+                                padding: EdgeInsets.all(16).copyWith(bottom: 0),
+                                child: CardPage(
+                                  txt: 'hi',
+                                  onPressed: () {},
+                                )),
+                          ),
+                        ],
                       ),
                       new SizedBox(
-                        width: 300,
-                        height: 300,
-                        child: Padding(
-                            padding: EdgeInsets.all(16).copyWith(bottom: 0),
-                            child: CardPage(
-                              txt: 'hi',
-                              onPressed: () {},
-                            )),
+                        height: screenSize.height * 0.05,
                       ),
-                    ],
-                  ),
-                ]),
-              ),
-              Column(
-                children: [Center(), Column()],
+                      new SizedBox(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.school,
+                              size: 30,
+                              color: Colors.blueGrey.shade300,
+                            ),
+                            Text(
+                              'Education',
+                              style: TextStyle(
+                                color: Colors.blueGrey.shade300,
+                                fontSize: 20,
+                                fontFamily: 'Montserrat',
+                                fontWeight: FontWeight.w500,
+                                letterSpacing: 3,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      EducationWidget(),
+                      new SizedBox(
+                        height: screenSize.height * 0.05,
+                      ),
+                      Container(
+                        width: screenSize.width * 1,
+                        height: screenSize.height * 0.05,
+                        child: Column(children: [
+                          Text("Copyright @Redhoshi's Site 2023"),
+                        ]),
+                      ),
+                    ]),
               ),
             ]),
           ],

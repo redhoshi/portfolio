@@ -63,6 +63,14 @@ class CardPage extends StatelessWidget {
                             onPressed: () {},
                           ),
                     ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        elevation: 0,
+                        primary: Colors.red, // background
+                        onPrimary: Colors.white, // foreground
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                      ),
                       child: Text('Buy Cat Food'),
                       onPressed: () {},
                     )
