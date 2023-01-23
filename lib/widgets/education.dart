@@ -8,41 +8,41 @@ class EducationWidget extends StatefulWidget {
 }
 
 class _EducationWidgetState extends State<EducationWidget> {
-  int _index = 0;
+  int currentStep = 0;
 
   @override
   Widget build(BuildContext context) {
     return Stepper(
-      currentStep: _index,
-      onStepCancel: () {
-        if (_index > 0) {
-          setState(() {
-            _index -= 1;
-          });
-        }
+      controlsBuilder: (context, controller) {
+        return const SizedBox.shrink();
       },
-      onStepContinue: () {
-        if (_index <= 0) {
-          setState(() {
-            _index += 1;
-          });
-        }
+      currentStep: currentStep,
+      onStepTapped: (stepIndex) {
+        setState(() => currentStep = stepIndex);
       },
-      onStepTapped: (int index) {
-        setState(() {
-          _index = index;
-        });
-      },
+      elevation: 1.0,
       steps: <Step>[
-        Step(
-          title: const Text('Step 1 title'),
-          content: Container(
-              alignment: Alignment.centerLeft,
-              child: const Text('Content for Step 1')),
+        const Step(
+          title: Text(
+              "2015-2018 | Tochigi Prefectural Utsunomiya Central Girls' High School"),
+          content: Text(
+              'I was a class representative in my class, a member of the brass band, and participated in an English debate competition. '),
         ),
         const Step(
-          title: Text('Step 2 title'),
-          content: Text('Content for Step 2'),
+          title: Text(
+              '2018-2022 | University of Tsukuba, Bachelor degree of Media arts Science and Technology'),
+          content: Text(
+              'I was a member of a brass band and researched music cognition of the hearing impaired for my graduation thesis.'),
+        ),
+        const Step(
+          title: Text(
+              "2022-202x | University of Tsukuba, Master's Programs in Informatics"),
+          content: Text('Now'),
+        ),
+        const Step(
+          title: Text(
+              "2023-2024 | Brandenburg University of Technology Cottbus - Senftenberg, Master's Programs in Artificial Intelligence"),
+          content: Text('Next'),
         ),
       ],
     );

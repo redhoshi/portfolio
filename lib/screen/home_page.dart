@@ -171,7 +171,11 @@ class _HomePageState extends State<HomePage> {
                           ],
                         ),
                       ),
-                      EducationWidget(),
+                      new SizedBox(
+                        height: screenSize.height * 0.7,
+                        width: screenSize.width * 0.7,
+                        child: EducationWidget(),
+                      ),
                       new SizedBox(
                         height: screenSize.height * 0.05,
                       ),
