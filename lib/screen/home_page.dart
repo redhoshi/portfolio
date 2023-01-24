@@ -106,7 +106,7 @@ class _HomePageState extends State<HomePage> {
                         width: screenSize.width * 1,
                         // width: screenSize.width * 0.3,
                         child: Image.asset(
-                          'assets/03.png', //assets/S__41214080.jpg
+                          'assets/04.png', //assets/S__41214080.jpg
                           fit: BoxFit.cover,
                         ), /*RainyPage()*/
                       ),
