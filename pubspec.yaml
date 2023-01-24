@@ -9,10 +9,10 @@ environment:
 
 
 dependencies:
-  audioplayers: ^2.0.0
   parallax_rain: ^1.0.2
   flutter:
     sdk: flutter
+  #  audioplayers: ^2.0.0
 
 
   cupertino_icons: ^1.0.2
