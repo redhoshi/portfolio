@@ -71,7 +71,7 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                     // mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      /*Row(children: [
+                      /* *Row(children: [
                         Text("Redhoshi's site"),*/
                       /* Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
