@@ -12,7 +12,7 @@ import '../widgets/top_bar.dart';
 
 class HomePage extends StatefulWidget {
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomePage> createState() => _HomePageState(); //_HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
@@ -70,37 +70,6 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                     // mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      /* *Row(children: [
-                        Text("Redhoshi's site"),*/
-                      /* Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            new SizedBox(
-                              height: screenSize.height * 0.4,
-                              width: screenSize.width * 0.4,
-                              child: Text(
-                                "Redhoshi's Site",
-                                style: TextStyle(
-                                  color: Colors.blueGrey.shade300,
-                                  fontSize: 20,
-                                  fontFamily: 'Montserrat',
-                                  fontWeight: FontWeight.w500,
-                                  letterSpacing: 3,
-                                ),
-                              ),
-                            ),
-                            Container(
-                              width: 300,
-                              height: 300,
-                              decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  image: DecorationImage(
-                                      fit: BoxFit.fill,
-                                      image: AssetImage(
-                                          "assets/S__41214085.jpg"))),
-                            ),
-                          ]),*/
                       SizedBox(
                         height: screenSize.height * 0.4,
                         width: screenSize.width * 1,
