@@ -34,6 +34,15 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    NetworkImage networkImage = const NetworkImage(
+      'assets/05.png',
+    );
+    @override
+    void didChangeDependencies() {
+      precacheImage(networkImage, context);
+      super.didChangeDependencies();
+    }
+
     var screenSize = MediaQuery.of(context).size;
     _opacity = _scrollPosition < screenSize.height * 0.40
         ? _scrollPosition / (screenSize.height * 0.40)
@@ -73,13 +82,15 @@ class _HomePageState extends State<HomePage> {
                       SizedBox(
                         height: screenSize.height * 0.4,
                         width: screenSize.width * 1,
-                        // width: screenSize.width * 0.3,
-                        child: Image.asset(
-                          'assets/04.png', //assets/S__41214080.jpg
+                        child: Image(
+                          image: networkImage,
                           fit: BoxFit.cover,
-                        ), /*RainyPage()*/
+                        ),
+                        /* Image.asset(
+                          'assets/04.png',
+                          fit: BoxFit.cover,
+                        ),*/
                       ),
-                      //]),
                       new SizedBox(
                         height: screenSize.height * 0.02,
                       ),
@@ -330,6 +341,16 @@ class _HomePageState extends State<HomePage> {
                                         .blueGrey.shade300, //.grey.shade300,
                                   ),
                                 ]),
+                            Text(
+                              "Redhoshi's Site",
+                              style: TextStyle(
+                                color: Colors.blueGrey.shade300,
+                                fontSize: 20,
+                                fontFamily: 'Montserrat',
+                                fontWeight: FontWeight.w500,
+                                letterSpacing: 3,
+                              ),
+                            ),
                           ],
                         ),
                       ),
