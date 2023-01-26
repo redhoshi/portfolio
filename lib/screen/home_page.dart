@@ -79,18 +79,39 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                     // mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SizedBox(
-                        height: screenSize.height * 0.4,
-                        width: screenSize.width * 1,
-                        child: Image(
-                          image: networkImage,
-                          fit: BoxFit.cover,
+                      Stack(children: [
+                        SizedBox(
+                          height: screenSize.height * 0.4,
+                          width: screenSize.width * 1,
+                          child: Image(
+                            image: networkImage,
+                            fit: BoxFit.cover,
+                          ),
                         ),
-                        /* Image.asset(
+                        Padding(
+                          padding: EdgeInsets.only(
+                                  top: screenSize.height * 0.18,
+                                  right: 20,
+                                  bottom: 30,
+                                  left: screenSize.width * 0.1)
+                              .copyWith(bottom: 0),
+                          child: Text(
+                            "Redhoshi's Site",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: screenSize.width * 0.03, //20
+                              fontFamily: 'Montserrat',
+                              fontWeight: FontWeight.w500,
+                              letterSpacing: 3,
+                            ),
+                          ),
+                        ),
+                      ]
+                          /* Image.asset(
                           'assets/04.png',
                           fit: BoxFit.cover,
                         ),*/
-                      ),
+                          ),
                       new SizedBox(
                         height: screenSize.height * 0.02,
                       ),
@@ -341,16 +362,6 @@ class _HomePageState extends State<HomePage> {
                                         .blueGrey.shade300, //.grey.shade300,
                                   ),
                                 ]),
-                            Text(
-                              "Redhoshi's Site",
-                              style: TextStyle(
-                                color: Colors.blueGrey.shade300,
-                                fontSize: 20,
-                                fontFamily: 'Montserrat',
-                                fontWeight: FontWeight.w500,
-                                letterSpacing: 3,
-                              ),
-                            ),
                           ],
                         ),
                       ),
