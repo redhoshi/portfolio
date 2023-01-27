@@ -83,38 +83,66 @@ class _HomePageState extends State<HomePage> {
                         SizedBox(
                           height: screenSize.height * 0.4,
                           width: screenSize.width * 1,
-                          child: Image(
-                            image: networkImage,
-                            fit: BoxFit.cover,
-                          ),
+                          child: screenSize.width > 540
+                              ? Image(
+                                  image: networkImage,
+                                  fit: BoxFit.cover,
+                                )
+                              : Align(
+                                  alignment: const Alignment(0, -1),
+                                  child: Image(
+                                    image: networkImage,
+                                    fit: BoxFit.cover,
+                                  )),
                         ),
-                        Padding(
-                          padding: EdgeInsets.only(
-                                  top: screenSize.height * 0.18,
-                                  right: 20,
-                                  bottom: 30,
-                                  left: screenSize.width * 0.1)
-                              .copyWith(bottom: 0),
-                          child: Text(
-                            "Redhoshi's Site",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: screenSize.width * 0.03, //20
-                              fontFamily: 'Montserrat',
-                              fontWeight: FontWeight.w500,
-                              letterSpacing: 3,
-                            ),
-                          ),
-                        ),
+                        screenSize.width > 540
+                            ? Padding(
+                                padding: EdgeInsets.only(
+                                        top: screenSize.height * 0.18,
+                                        right: 20,
+                                        bottom: 30,
+                                        left: screenSize.width * 0.1)
+                                    .copyWith(bottom: 0),
+                                child: Text(
+                                  "Redhoshi's Site",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: screenSize.width * 0.03, //20
+                                    fontFamily: 'Montserrat',
+                                    fontWeight: FontWeight.w500,
+                                    letterSpacing: 3,
+                                  ),
+                                ),
+                              )
+                            : Padding(
+                                padding: EdgeInsets.only(
+                                        top: screenSize.width * 0.25,
+                                        left: screenSize.width * 0.1)
+                                    .copyWith(bottom: 0),
+                                child: Text(
+                                  "Redhoshi's Site",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: screenSize.width * 0.03, //20
+                                    fontFamily: 'Montserrat',
+                                    fontWeight: FontWeight.w500,
+                                    letterSpacing: 3,
+                                  ),
+                                ),
+                              )
                       ]
                           /* Image.asset(
                           'assets/04.png',
                           fit: BoxFit.cover,
                         ),*/
                           ),
-                      new SizedBox(
-                        height: screenSize.height * 0.02,
-                      ),
+                      screenSize.width > 540
+                          ? new SizedBox(
+                              height: screenSize.height * 0.02,
+                            )
+                          : new SizedBox(
+                              // height: screenSize.width * 0.005,
+                              ),
                       new SizedBox(
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
