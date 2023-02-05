@@ -1,11 +1,14 @@
 /* /Volumes/lspc/lecture/audioplayers-main/packages/audioplayers/example */
 
 import 'package:flutter/material.dart';
+import 'package:flutter_breadcrumb/flutter_breadcrumb.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:port/widgets/education.dart';
 import 'package:port/widgets/rainy.dart';
 
 import '../components/card.dart';
+import '../res/color.dart';
+import '../res/const.dart';
 import '../widgets/explore_drawer.dart';
 import '../widgets/responsive.dart';
 import '../widgets/top_bar.dart';
@@ -82,6 +85,38 @@ class _SubPageState extends State<SubPage> {
                       ),
                       new SizedBox(
                         height: screenSize.height * 0.02,
+                      ),
+                      BreadCrumb(
+                        items: <BreadCrumbItem>[
+                          BreadCrumbItem(content: Text('Item1')),
+                          BreadCrumbItem(content: Text('Item2')),
+                        ],
+                        divider: Icon(Icons.chevron_right),
+                      ),
+                      BreadCrumb.builder(
+                        itemCount: ExampleConst.breadcrumbs.length,
+                        builder: (index) => BreadCrumbItem(
+                          content: Text(
+                            ExampleConst.breadcrumbs[index],
+                            style: TextStyle(
+                              fontWeight: index < 3
+                                  ? FontWeight.bold
+                                  : FontWeight.normal,
+                              fontSize: 14,
+                            ),
+                          ),
+                          borderRadius: BorderRadius.circular(4),
+                          padding: EdgeInsets.all(4),
+                          splashColor: ExampleColors.accent,
+                          onTap: index < 3 ? () {} : null,
+                          textColor: ExampleColors.primary,
+                          disabledTextColor: Colors.grey,
+                        ),
+                        divider: Icon(
+                          Icons.chevron_right,
+                          color: Colors.grey,
+                        ),
+                        overflow: ScrollableOverflow(),
                       ),
                       Divider(),
                       new SizedBox(
