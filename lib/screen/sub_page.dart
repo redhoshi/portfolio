@@ -86,37 +86,36 @@ class _SubPageState extends State<SubPage> {
                       new SizedBox(
                         height: screenSize.height * 0.02,
                       ),
-                      BreadCrumb(
-                        items: <BreadCrumbItem>[
-                          BreadCrumbItem(content: Text('Item1')),
-                          BreadCrumbItem(content: Text('Item2')),
-                        ],
-                        divider: Icon(Icons.chevron_right),
-                      ),
-                      BreadCrumb.builder(
-                        itemCount: ExampleConst.breadcrumbs.length,
-                        builder: (index) => BreadCrumbItem(
-                          content: Text(
-                            ExampleConst.breadcrumbs[index],
-                            style: TextStyle(
-                              fontWeight: index < 3
-                                  ? FontWeight.bold
-                                  : FontWeight.normal,
-                              fontSize: 14,
+                      Padding(
+                        padding: EdgeInsets.only(left: screenSize.width * 0.05),
+                        child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: BreadCrumb.builder(
+                            itemCount: ExampleConst.creation_teach.length,
+                            builder: (index) => BreadCrumbItem(
+                              content: Text(
+                                ExampleConst.creation_teach[index],
+                                style: TextStyle(
+                                  fontWeight: index < 2
+                                      ? FontWeight.bold
+                                      : FontWeight.normal,
+                                  fontSize: 14,
+                                ),
+                              ),
+                              borderRadius: BorderRadius.circular(4),
+                              padding: EdgeInsets.all(4),
+                              splashColor: ExampleColors.accent,
+                              onTap: index < 1 ? () {} : null,
+                              textColor: ExampleColors.primary,
+                              disabledTextColor: Colors.grey,
                             ),
+                            divider: Icon(
+                              Icons.chevron_right,
+                              color: Colors.grey,
+                            ),
+                            overflow: ScrollableOverflow(),
                           ),
-                          borderRadius: BorderRadius.circular(4),
-                          padding: EdgeInsets.all(4),
-                          splashColor: ExampleColors.accent,
-                          onTap: index < 3 ? () {} : null,
-                          textColor: ExampleColors.primary,
-                          disabledTextColor: Colors.grey,
                         ),
-                        divider: Icon(
-                          Icons.chevron_right,
-                          color: Colors.grey,
-                        ),
-                        overflow: ScrollableOverflow(),
                       ),
                       Divider(),
                       new SizedBox(
